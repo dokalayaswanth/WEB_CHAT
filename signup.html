@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBCHAT Signup</title>
+    <link rel="icon" href="images/Vector.png">
+    <link rel="stylesheet" href="signup_page.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="signup">
+            <form action="signup" class="signup_form" id="signup-form">
+                <div class="signup_info"><h2>Sign Up</h2></div>
+                <div class="input_fields">
+                    <div class="entries">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="UserName" id="username" required><br>
+                    </div>
+                    <div class="entries">
+                        <i class='bx bx-phone'></i>
+                        <input type="text" placeholder="Mobile No" id="phoneno" required><br>
+                    </div>
+                    <div class="entries">
+                        <i class='bx bx-envelope' ></i>
+                        <input type="email" placeholder="Email" id="email" required><br>
+                    </div>
+                    <div class="entries">
+                        <i class='bx bxs-lock-alt' ></i>
+                        <input type="password" placeholder="Password" id="password" required><br>
+                    </div>
+                    <div class="entries">
+                        <i class='bx bxs-lock-alt' ></i>
+                        <input type="password" placeholder="Confirm" id="confirm-password" required><br>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const signupForm = document.getElementById('signup-form');
+        signupForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const phoneno = document.getElementById('phoneno').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+            } else {
+                alert('Sign up successful!');
+                window.location.href = "login_page.html";
+            }
+        });
+    });
+</script>
+</html>

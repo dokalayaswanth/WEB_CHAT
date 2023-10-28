@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="">
+    <title>WEBCHAT</title>
+    <link rel="icon" href="images/Vector.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="chat_page.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
+    <link rel="stylesheet" href="moder_css_reset.css">
+    <script src="node.js"></script>
+</head>
+<body>
+    <div class="spidy" id="Spidy">
+        <video src="images/introVideo.mp4"  
+        width="640" 
+        height="360" 
+        autoplay
+        playsinline
+        poster="path/to/your-thumbnail.jpg" 
+        preload="auto" id="Video">
+        </video>
+        <button class="skip_button" onclick="myHandler()"><i class='bx bx-fast-forward'></i></button>
+    </div>
+    <div class="chat" id="Chat">
+        <video autoplay muted loop class="Background">
+            <source src="images/loopVideo.mp4" type="video/mp4">
+        </video>
+        <div class="chat_list_background">
+            <div class="chat_box_intro">
+                <div class="chat_list">
+                    <div class="chat_img">
+                        <img src="images/shinobu.webp" class="chat_profile_img">
+                    </div>
+                    <div class="search_bar">
+                        <form action="#" class="search_bar_form">
+                            <button class="search_bar_symbol"><i class='bx bx-search-alt-2'></i></button>
+                            <input class="search" placeholder="search...."></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="chat_list_container">
+                <div class="chat_list_names">
+                    <div class="chat_list_member" onclick="openForm()">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.yloMSL3AV6Vj-7Kq-PZ6AQHaF7&pid=Api&P=0&h=180" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>Selena Gomez</h2>
+                            <p class="chat_list_member_msg">Watashi mo</p>
+                            </nobr>
+                        </div>
+                    </div>
+                    <div class="chat_list_member">
+                        <img src="https://c4.wallpaperflare.com/wallpaper/127/164/7/kid-luffy-monkey-d-luffy-one-piece-anime-hd-wallpaper-preview.jpg" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>Monkey D.Luffy</h2>
+                            <p class="chat_list_member_msg">Kaizoku oni orewa naru</p>
+                            </nobr>
+                        </div>
+                    </div>
+                    <div class="chat_list_member">
+                        <img src="https://i.pinimg.com/originals/b6/30/fc/b630fced892453895d6e3f08b2b6b5b4.jpg" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>Tom Cruise</h2>
+                            <p class="chat_list_member_msg">Mission successful</p>
+                            </nobr>
+                        </div>
+                    </div>
+                    <div class="chat_list_member">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSttg5U_FYzO_M1rIQqgWNOemZESaUCP__TVg&usqp=CAU" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>Jennifer Lawrence</h2>
+                            <p class="chat_list_member_msg">How have you been</p>
+                            </nobr>
+                        </div>
+                    </div>
+                    <div class="chat_list_member">
+                        <img src="https://images.hdqwalls.com/wallpapers/dark-naruto-1n.jpg" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>Naruto</h2>
+                            <p class="chat_list_member_msg">Dattebayo!!!!</p>
+                            </nobr>
+                        </div>
+                    </div>
+                    <div class="chat_list_member">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRJsX5QtEJQFNz1qBF6yCzzkbSJujMoe_k_A&usqp=CAU" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>Akeno</h2>
+                            <p class="chat_list_member_msg">Ara Ara</p>
+                            </nobr>
+                        </div>
+                    </div>
+                    <div class="chat_list_member">
+                        <img src="https://images.mubicdn.net/images/cast_member/4103/cache-3435-1524851096/image-w856.jpg" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>RDJ</h2>
+                            <p class="chat_list_member_msg">Whats New???</p>
+                            </nobr>
+                        </div>
+                    </div>
+                    <div class="chat_list_member">
+                        <img src="https://cutewallpaper.org/21/joey-tribbiani-wallpapers/Image-about-joey-tribbiani-in-f.r.i.e.n.d.s-by-caroll.jpg" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>Joey Tribbiani</h2>
+                            <p class="chat_list_member_msg">How u dng?</p>
+                            </nobr>
+                        </div>
+                    </div>
+                    <div class="chat_list_member">
+                        <img src="https://i.pinimg.com/originals/22/06/9e/22069ef44856c210079e5de21748973d.jpg" class="chat_list_member_image">
+                        <div class="chat_list_member_details">
+                            <nobr>
+                                <h2>Roronoa Zoro</h2>
+                            <p class="chat_list_member_msg">Love Cook....</p>
+                            </nobr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat_background" id="myForm">
+            <div class="chat_list">
+                <div class="chat_profile">
+                    <div class="chat_img_msg">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.yloMSL3AV6Vj-7Kq-PZ6AQHaF7&pid=Api&P=0&h=180" class="chat_profile_img">
+                        <div class="chat_name">
+                            <h2>Selena Gomez</h2>
+                            <p class="chat_profile_status">online</p>
+                        </div>    
+                    </div>
+                    <div class="chat_menu">
+                        <div class="chat_menu_toggle"><i class='bx bx-dots-vertical-rounded'></i></div>
+                        <div class="menu">
+                            <li>
+                                <a href="#">search</a>
+                            </li>
+                            <li>
+                                <a href="#">report</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat_messages_container" id="chat_messages_container">
+                    <div class="chat_messages" id="chatMessages">
+                        <div class="chat_messages_details sent">
+                            <span class="chat_messages_text">
+                                orewa dai ski des
+                            </span>
+                            <span class="chat_messages_time">9:00</span>
+                        </div>
+                        <div class="chat_messages_details recieve">
+                            <span class="chat_messages_text">
+                                watashi mo
+                            </span>
+                            <span class="chat_messages_time">9:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat_footer">
+                    <form class="chat_message_form" onsubmit="sendMessage(); return false;">
+                        <textarea placeholder="Type a message....." class="chat_box_input" id="messageInput"></textarea>
+                        <button type="submit" class="chat_message_submit_button"><i class='bx bx-send'></i></button>
+                        <audio src="images/notification1.mp3" style="display: none;" id="notification1" controls></audio>
+                        <audio src="images/ara_ara_sms.mp3" style="display: none;" id="notification2" controls></audio>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('Video').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        document.getElementById('Spidy').style.display="none";
+        document.getElementById('Video').muted = true;
+        document.getElementById('Chat').style.display="flex";
+    }
+    function openForm(){
+        document.getElementById("myForm").style.display = "block";
+    }
+    function closeForm(){
+        document.getElementById("myForm").style.display = "none";
+    } 
+    function sendMessage(){
+        var messageInput = document.getElementById("messageInput");
+        var messageText = messageInput.value.trim();
+        if (messageText !== "") {
+            var messageElement = document.createElement("div");
+            messageElement.classList.add("chat_messages_details", "sent");
+            messageElement.innerHTML = `
+                <span class="chat_messages_text">${messageText}</span>
+                <span class="chat_messages_time">${getCurrentTime()}</span>
+            `;
+            var chatMessages = document.getElementById("chatMessages");
+            chatMessages.appendChild(messageElement);
+            var chatMessagescontainer=document.getElementById("chat_messages_container");
+            chatMessagescontainer.scrollTop = chatMessages.scrollHeight;
+            messageInput.value = "";
+            playsentMusic();
+        }
+    }
+    function getCurrentTime() {
+        var now = new Date();
+        var hours = now.getHours().toString().padStart(2, "0");
+        var minutes = now.getMinutes().toString().padStart(2, "0");
+        return hours + ":" + minutes;
+    }
+    function playsentMusic(){
+        document.getElementById('notification1').play();
+    }
+    function playNotification(){
+        document.getElementById('notification2').play();
+    }
+</script>
+</html>

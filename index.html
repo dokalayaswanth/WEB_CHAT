@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Vector.png">
+    <title>WEBCHAT Login</title>
+    <link rel="stylesheet" href="login_page.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/Vector.png" id="Logo" class="logo">
+        <div class="login" id="Form">
+            <img src="images/logo.png" class="Logo" id="LoginLogo">
+            <form class="login_form" onsubmit="return validateForm()">
+                <div class="login_info">
+                    <h1>Login Form</h1>
+                </div>
+                <label for="user">UserName</label>
+                <br>
+                <input type="text" name="user" id="user" required>
+                <br><br>
+                <label for="password">Password</label>
+                <br>
+                <input type="password" name="password" id="password" required>
+                <br><br>
+                <button type="submit">Submit</button>
+                <br><br>
+                <p class="signup">If not registerd.&nbsp;<a href="signup.html">Register</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        const image = document.getElementById('Logo');
+        const form = document.getElementById('Form');
+        function enlargeImage() {
+            image.style.width ='800rem';
+            image.style.height ='800rem';
+            setTimeout(() => {
+                image.style.display='none';
+            }, 1000);
+            setTimeout(()=>{
+                form.style.display='flex';
+                document.getElementById('LoginLogo').style.display='flex';
+            },900);
+        }
+        image.addEventListener('click', enlargeImage);
+        function validateForm() {
+            var username = document.getElementById("user").value;
+            var password = document.getElementById("password").value;
+            if (username === "yaswanth" && password === "Mira") {
+                window.location.href = "chat_page.html";
+                return false;
+            } else {
+                alert("Invalid credentials. Please try again.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
